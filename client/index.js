@@ -16,6 +16,7 @@ const stopserver = require('./methods/stopServer.js');
 const killserver = require('./methods/killServer.js');
 const restartserver = require('./methods/restartServer.js');
 const sendcommand = require('./methods/sendCommand.js');
+const getserverupload = require('./methods/getServerUpload.js');
 
 /**
  *
@@ -81,4 +82,5 @@ module.exports = {
 	killServer: killserver,
 	restartServer: restartserver,
 	sendCommand: sendcommand,
+	getServerUpload: getserverupload,
 };

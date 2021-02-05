@@ -75,6 +75,9 @@ class Request {
 			else if (request == 'SendCommand') {
 				return 'Command send successfully';
 			}
+			else if (request == 'getServerUpload') {
+				return 'Upload link got';
+			}
 		}).catch(error => {
 			const err = createError(request, error);
 			if (err) throw err;
@@ -100,6 +103,9 @@ function getUrl(request, host, data) {
 	}
 	else if (request == 'SendCommand') {
 		return host + '/api/client/servers/' + data + '/command';
+	}
+	else if (request == 'getServerUpload') {
+		return host + '/api/client/servers/' + data + '/files/upload';
 	}
 }
 
