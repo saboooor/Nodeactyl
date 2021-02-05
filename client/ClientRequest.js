@@ -40,6 +40,9 @@ class Request {
 			else if (request == 'GetDiskUsage') {
 				return { 'current': response.data.attributes.resources.disk_bytes };
 			}
+			else if (request == 'getServerUpload') {
+				return { 'current': response.data.attributes.resources.disk_bytes };
+			}
 		}).catch(error => {
 			const err = createError(request, error);
 			if (err) throw err;
