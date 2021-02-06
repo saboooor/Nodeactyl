@@ -41,7 +41,7 @@ class Request {
 				return { 'current': response.data.attributes.resources.disk_bytes };
 			}
 			else if (request == 'getServerUpload') {
-				return response;
+				return response.data.attributes.url;
 			}
 		}).catch(error => {
 			const err = createError(request, error);
